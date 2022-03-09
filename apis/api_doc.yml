@@ -1,0 +1,28 @@
+summary: "Insert vessel"
+description: "Endpoint to insert a new vessel.”
+consumes:
+- "application/json"
+produces:
+- "application/json"
+parameters:
+- in: "body"
+  name: "body"
+  description: "Accepts a input vessel code"
+  required: "true"
+  schema:
+    type: "object"
+    properties:
+      order:
+        type: "object"
+    example: {'code':"MV900"}
+ 
+responses:
+  200:
+    description: 'Ok'
+    schema:
+      type: "object"
+      properties:
+        status: 201
+          type: "string"
+        message: 'Ok'
+          type: "string"
